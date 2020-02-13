@@ -1,0 +1,6 @@
+1.This Folder needs to be in the Xamp Server Installation Folder.
+2.Inside Xamp Folder Called htdocs Actually working as a Our Server Host or Root
+3. Save File Inside This htdocs Only.
+4. You can make your Own folder Inside htdocs
+5.For Permission Use You have to Write In URL:Your Given Folder Name/file.php 
+6.Else you can Only write Folder name and Run . It will take you to the Folder and by clicking you can choose.
