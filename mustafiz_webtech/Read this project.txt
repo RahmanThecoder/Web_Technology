@@ -1,0 +1,8 @@
+The Project Build By : Md Mustafizur Rahman
+ID: 17-34272-1
+Used: Core PHP , HTML ,CSS, JAVASCRIPT, JQUERY, AJAX
+SERVER: XAMP 
+FOR further : Used Boostrap CSS class for more easy to build 
+Datetimepicker : used Javascript
+Some JavaScript Function: topnavfixed and nfeedleftsearchfixed
+php function: list, sublist,combolist, timeago

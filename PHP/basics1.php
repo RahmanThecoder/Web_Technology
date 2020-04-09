@@ -773,48 +773,468 @@ var_dump($x !== $y);
 ?>
 
  end of php operatorss -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
-<!-- -->
+<!-- 77
+<?php
+$t = date("H");
+
+if ($t < "20") {
+    echo "Have a good day!";
+}
+?>
+-->
+<!--78
+ <?php
+$t = date("H");
+
+if ($t < "20") {
+    echo "Have a good day!";
+} else {
+    echo "Have a good night!";
+}
+?>
+-->
+<!-- 79
+<?php
+$t = date("H");
+
+if ($t < "10") {
+    echo "Have a good morning!";
+} elseif ($t < "20") {
+    echo "Have a good day!";
+} else {
+    echo "Have a good night!";
+}
+?>
+
+-->
+<!-- 80 switch case
+<?php
+$favcolor = "red";
+
+switch ($favcolor) {
+    case "red":
+        echo "Your favorite color is red!";
+        break;
+    case "blue":
+        echo "Your favorite color is blue!";
+        break;
+    case "green":
+        echo "Your favorite color is green!";
+        break;
+    default:
+        echo "Your favorite color is neither red, blue, nor green!";
+}
+?>
+
+ -->
+<!--81
+<?php
+$x = 1;
+
+while($x <= 5) {
+    echo "The number is: $x <br>";
+    $x++;
+}
+?>
+
+ -->
+<!--82
+<?php
+$x = 0;
+
+while($x <= 100) {
+    echo "The number is: $x <br>";
+    $x+=10;
+}
+?>
+
+ -->
+<!--83
+<?php
+$x = 1;
+
+do {
+    echo "The number is: $x <br>";
+    $x++;
+} while ($x <= 5);
+?>
+
+ -->
+<!-- 84
+<?php
+$x = 6;
+
+do {
+    echo "The number is: $x <br>";
+    $x++;
+} while ($x <= 5);
+?>
+
+
+ -->
+<!-- 85
+<?php
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+}
+?>
+
+ -->
+<!-- 86
+<?php
+for ($x = 0; $x <= 100; $x+=10) {
+    echo "The number is: $x <br>";
+}
+?>
+
+
+-->
+<!--87
+<?php
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $value) {
+  echo "$value <br>";
+}
+?>
+
+
+ -->
+<!--88
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+foreach($age as $x => $val) {
+  echo "$x = $val<br>";
+}
+?>
+
+ -->
+<!--89 function
+<?php
+function writeMsg() {
+    echo "Hello world!";
+}
+
+writeMsg(); // call the function
+?>
+
+ -->
+<!-- 90
+<?php
+function familyName($fname) {
+    echo "$fname Refsnes.<br>";
+}
+
+familyName("Jani");
+familyName("Hege");
+familyName("Stale");
+familyName("Kai Jim");
+familyName("Borge");
+?>
+
+ -->
+<!-- 91
+<?php
+function familyName($fname, $year) {
+    echo "$fname Refsnes. Born in $year <br>";
+}
+
+familyName("Hege", "1975");
+familyName("Stale", "1978");
+familyName("Kai Jim", "1983");
+?>
+
+
+-->
+<!--92
+<?php
+function addNumbers(int $a, int $b) {
+    return $a + $b;
+}
+echo addNumbers(5, "5 days");
+// since strict is NOT enabled "5 days" is changed to int(5), and it will return 10
+?>
+
+
+ -->
+<!-- 93
+<?php declare(strict_types=1); // strict requirement
+
+function addNumbers(int $a, int $b) {
+    return $a + $b;
+}
+echo addNumbers(5, "5 days");
+// since strict is enabled and "5 days" is not an integer, an error will be thrown
+?>
+
+ -->
+<!-- 94
+<?php declare(strict_types=1); // strict requirement
+function setHeight(int $minheight = 50) {
+    echo "The height is : $minheight <br>";
+}
+
+setHeight(350);
+setHeight(); // will use the default value of 50
+setHeight(135);
+setHeight(80);
+?>
+
+-->
+<!-- 95
+<?php declare(strict_types=1); // strict requirement
+function sum(int $x, int $y) {
+    $z = $x + $y;
+    return $z;
+}
+
+echo "5 + 10 = " . sum(5, 10) . "<br>";
+echo "7 + 13 = " . sum(7, 13) . "<br>";
+echo "2 + 4 = " . sum(2, 4);
+?>
+
+ -->
+<!--96
+<?php declare(strict_types=1); // strict requirement
+function addNumbers(float $a, float $b) : float {
+    return $a + $b;
+}
+echo addNumbers(1.2, 5.2);
+?>
+
+
+
+-->
+<!-- 97
+<?php declare(strict_types=1); // strict requirement
+function addNumbers(float $a, float $b) : int {
+    return (int)($a + $b);
+}
+echo addNumbers(1.2, 5.2);
+?>
+
+ -->
+<!-- 98
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+?>
+
+
+ -->
+<!--
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo count($cars);
+?>
+
+
+ -->
+<!--
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+?>
+
+
+ -->
+<!-- 
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+$arrlength = count($cars);
+
+for($x = 0; $x < $arrlength; $x++) {
+    echo $cars[$x];
+    echo "<br>";
+}
+?>
+
+-->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+echo "Peter is " . $age['Peter'] . " years old.";
+?>
+
+
+
+ -->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+foreach($age as $x => $x_value) {
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+?>
+
+ -->
+<!--
+<?php
+echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".<br>";
+echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".<br>";
+echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>";
+echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";
+?>
+
+
+ -->
+<!-- 
+<?php
+for ($row = 0; $row < 4; $row++) {
+  echo "<p><b>Row number $row</b></p>";
+  echo "<ul>";
+  for ($col = 0; $col < 3; $col++) {
+    echo "<li>".$cars[$row][$col]."</li>";
+  }
+  echo "</ul>";
+}
+?>
+
+
+-->
+<!-- 
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+sort($cars);
+?>
+
+
+
+-->
+<!--
+<?php
+$numbers = array(4, 6, 2, 22, 11);
+sort($numbers);
+?>
+
+ -->
+<!--
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+rsort($cars);
+?>
+
+ -->
+<!--
+<?php
+$numbers = array(4, 6, 2, 22, 11);
+rsort($numbers);
+?>
+ -->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+asort($age);
+?>
+
+
+ -->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+ksort($age);
+?>
+
+ -->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+arsort($age);
+?>
+
+
+ -->
+<!--
+<?php
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+krsort($age);
+?>
+
+
+ -->
+<!--
+<?php
+$x = 75;
+$y = 25;
+ 
+function addition() {
+    $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y'];
+}
+ 
+addition();
+echo $z;
+?>
+
+
+ -->
+<!--
+<?php
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_HOST'];
+echo "<br>";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+?>
+
+
+ -->
+<!--
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_REQUEST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+
+
+ -->
+<!--
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+
+
+ -->
+<!--
+<?php
+echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+?>
+
+
+ -->
 <!-- -->
 <!-- -->
 <!-- -->
