@@ -208,7 +208,7 @@ if (((@$_FILES['profilepic']['type']=='image/jpeg') || (@$_FILES['profilepic']['
 													echo '<img src="image/profilepic/'.$pro_pic_db.'" class="home-prodlist-imgi">';
 												}else {
 													
-													echo'<div class="home-prodlist-imgi" style="text-align: center; padding: 0 0 6px 0;">No Image Found!</div>';
+													echo'<div class="home-prodlist-imgi" style="text-align: center; padding: 0 0 6px 0;"> BLANK!</div>';
 												}
 											echo '</div><div style="text-align: center;"><input type="file" name="profilepic" value="Choose"/></div></br>
 											<h2 style="text-align: center;">Personal Informaion</h2>
@@ -276,12 +276,10 @@ if (((@$_FILES['profilepic']['type']=='image/jpeg') || (@$_FILES['profilepic']['
 			</ul>
 		</div>
 	</div>
-	<!-- footer -->
-	<div>
 
-	</div>
+
 </div>
-<!-- homemenu tab script -->
+
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 

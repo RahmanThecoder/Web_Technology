@@ -125,7 +125,6 @@ if (isset($_POST['submit'])) {
 	} );
 	</script>
 	<!-- date link end -->
-	<!-- menu tab link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 
@@ -145,7 +144,6 @@ if (isset($_POST['submit'])) {
 		</header>
 		<div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:100px;" id="mySidebar">
 		  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
-		  <a href="index.php" class="w3-bar-item w3-button">Tution</a>
 
 		</div>
 		<div class="topnav">
@@ -303,8 +301,8 @@ if (isset($_POST['submit'])) {
 				  				<p><?php echo '<input name="deadline" type="text" id="datepicker" placeholder="e.g: 30/10/2017" value="'.$deadline.'">'; ?></p>
 				  			</div>
 				  	</div>
-				  		<input type="submit" style="float: left;" class="sub_button" name="submit" value="Update"/>
-						<input type="submit" class="sub_button" name="deletepost" style="float: right;" value="Delete"/>
+				  		<input type="submit" style="float: left;" class="sub_button" name="submit" value="Update?"/>
+						<input type="submit" class="sub_button" name="deletepost" style="float: right;" value="Delete?"/>
 				</form></br></br>
 			</div>
 			</div>

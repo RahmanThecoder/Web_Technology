@@ -58,7 +58,6 @@ if (isset($_POST['post_apply'])) {
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- menu tab link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -166,20 +165,20 @@ if (isset($_POST['post_apply'])) {
 							<div class="p_head">
 							<div style="float: right;">';
 								if($user!='' && $utype_db=='student'){
-										echo "<span style='color: red;'>Only teacher can apply!</span>";
+										echo "<span style='color: red;'>Here Only teacher can apply!</span>";
 								}else {
 									if((strtotime($deadline) - strtotime($todaydate)) < 0){
 										echo '
-										<input type="submit" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Deadline Over" />';
+										<input type="submit" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Time Over" />';
 									}else{
 										$resultpostcheck = $con->query("SELECT * FROM record WHERE post_id='$pstid' AND applied_by='$user'");
 											$query_apply_cnt = $resultpostcheck->num_rows;
 											if($query_apply_cnt > 0){
 												echo '
-											<input type="button" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Already Applied" />';
+											<input type="button" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="You Applied already" />';
 											}else{
 											echo '<form action="" method="post">
-											<input type="submit" class="sub_button" style="margin: 0px;" name="post_apply" value="Confirm Apply" />
+											<input type="submit" class="sub_button" style="margin: 0px;" name="post_apply" value="Confirm Apply!" />
 										</form>';
 												}
 										
@@ -256,7 +255,6 @@ if (isset($_POST['post_apply'])) {
 
 
 </div>
-<!-- home menu tab -->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 </body>

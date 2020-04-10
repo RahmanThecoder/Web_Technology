@@ -276,7 +276,7 @@ $list_check = new checkboxlist();
 				  				<label>Deadline: </label>
 				  			</div>
 				  			<div style="width: 20%; float: left;">
-				  				<p><?php echo '<input name="deadline" type="text" id="datepicker" placeholder="e.g: 30/04/2020" value="'.$f_dead.'">'; ?></p>
+				  				<p><?php echo '<input name="deadline" type="text" id="datepicker" placeholder="30/04/2020" value="'.$f_dead.'">'; ?></p>
 				  			</div>
 				  		</div>
 					<input type="submit" name="submit" class="sub_button" value="Post"/></br></br>
@@ -287,12 +287,7 @@ $list_check = new checkboxlist();
 			
 		</div>
 	</div>
-	<!-- footer -->
-	<div>
-	<?php
-		#include 'inc/footer.inc.php';
-	?>
-	</div>
+
 </div>
 
 <!-- main jquery script -->

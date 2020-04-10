@@ -33,7 +33,6 @@ if (isset($_REQUEST['teacher'])) {
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!--<link href="css/footer.css" rel="stylesheet" type="text/css" media="all" />-->
 	
 </head>
 <body class="body1">

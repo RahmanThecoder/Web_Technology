@@ -36,7 +36,6 @@ if (isset($_REQUEST['confirm'])) {
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!-- menu tab link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>

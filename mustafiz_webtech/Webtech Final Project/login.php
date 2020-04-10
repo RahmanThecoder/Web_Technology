@@ -40,10 +40,7 @@ if (isset($_POST['login'])) {
 			$result = $con->query("UPDATE registration SET online='$online' WHERE id='$get_user_uname_db'");
 			if($_SESSION['u_post'] == "post")
 			{
-				//if (isset($_REQUEST['ono'])) {
-			//	$ono = mysql_real_escape_string($_REQUEST['ono']);
-			//	header("location: orderform.php?poid=".$ono."");
-			//}else {
+
 				if($get_user_type_db == "teacher"){
 					$_REQUEST['teacher'] = "logastchr";
 					header('location: checking.php?teacher=logastchr');
@@ -114,7 +111,6 @@ if(isset($_POST['activate'])){
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/reg.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- menu tab link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
@@ -211,7 +207,6 @@ if(isset($_POST['activate'])){
 	?>
 	</div>
 	</div>
- <!-- homemenu tab script -->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>

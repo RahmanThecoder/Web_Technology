@@ -49,7 +49,6 @@ $time = new timeago();
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- menu tab link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	
 </head>
@@ -209,7 +208,7 @@ $time = new timeago();
 									echo '<img src="image/profilepic/'.$pro_pic_db.'" class="home-prodlist-imgi">';
 								}else {
 									
-									echo'<div class="home-prodlist-imgi" style="text-align: center; padding: 0 0 6px 0;">No Image Found!</div>';
+									echo'<div class="home-prodlist-imgi" style="text-align: center; padding: 0 0 6px 0;"> BLANK !</div>';
 								}
 							echo '</div><h4 style="text-align: center; font-size: 12px;">This Account Type: '.ucfirst($utype_db).'</h4>
 							<h2 style="text-align: center;">Profile Informaion</h2>
@@ -260,7 +259,7 @@ $time = new timeago();
 								}else if($utype_db == "teacher"){
 									echo '<div class="itemrow">
 					  			<div style="width: 20%; float: left;">
-					  				<label>Institute: </label>
+					  				<label>Institution: </label>
 					  			</div>
 					  			<div style="width: 80%; float: left;">
 					  				<span>'.$uinsname_db.'</span>
@@ -279,7 +278,7 @@ $time = new timeago();
 								<a href="updatetutioninfo.php?uid='.$user.'" style="float: right; color: #aaa; font-weight: bold;"><img src="image/edit.png" height="25" width="25" ></a>
 							</div>';
 							}
-							echo '<h2 style="text-align: center;">Tution Job Informaion</h2>
+							echo '<h2 style="text-align: center;">Teaching Job Informaion</h2>
 							<div class="itemrow">
 					  			<div style="width: 20%; float: left;">
 					  				<label>Medium: </label>
@@ -337,8 +336,6 @@ $time = new timeago();
 
 
 </div>
-
-<!-- homemenu tab script -->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>

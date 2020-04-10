@@ -29,7 +29,6 @@ $time = new timeago();
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	
@@ -106,7 +105,7 @@ $time = new timeago();
 
 
 				<?php
-					$todaydate = date("m/d/Y"); //Month/Day/Year 12/20/2017
+					$todaydate = date("m/d/Y"); //Month/Day/Year 30/04/2020
 
 					$query = $con->query("SELECT * FROM post ORDER BY id DESC");
 					while ($row = $query->fetch_assoc()) {
@@ -164,13 +163,13 @@ $time = new timeago();
 								}else {
 									if((strtotime($deadline) - strtotime($todaydate)) < 0){
 										echo '
-										<input type="submit" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Deadline Over" />';
+										<input type="submit" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Time Over" />';
 									}else{
 										$resultpostcheck = $con->query("SELECT * FROM record WHERE post_id='$post_id' AND applied_by='$user'");
 											$query_apply_cnt = $resultpostcheck->num_rows;
 											if($query_apply_cnt > 0){
 												echo '
-											<input type="button" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="Already Applied" />';
+											<input type="button" class="sub_button" style="margin: 0px; background-color: #a76d6d; cursor: default;" name="" value="You Applied already" />';
 											}else{
 											echo '<form action="viewpost.php?pid='.$post_id.'" method="post">
 									<input type="submit" class="sub_button" style="margin: 0px;" name="" value="Apply" />

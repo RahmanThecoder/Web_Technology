@@ -56,7 +56,7 @@ if (isset($_POST['updatetutioninfo'])) {
 					$mediumlist = implode(',', $_POST['medium_list']);
 
 					//not working!!!!!!!!!!!!
-					//$result3 = mysqli_query($con, "UPDATE tutor SET prefer_sub='$sublist',class='$classlist',medium='$mediumlist',salary='$f_sal',prefer_location='$f_loca', WHERE t_id='$user'");
+					//$result3 = mysqli_query($con, "UPDATE teacher SET prefer_subject='$sublist',class='$classlist',medium='$mediumlist',salary='$f_sal',prefer_location='$f_loca', WHERE t_id='$user'");
 
 					if($result4 = $con->query("INSERT INTO teacher (teacher_id,	name_of_institution,prefer_subject,prefer_location,class,medium,salary) VALUES ('$user','$uinst_db','$sublist','$_POST[location]','$classlist','$mediumlist','$_POST[sal_range]')")){
 						$result = $con->query("DELETE FROM teacher WHERE id='$id_db'");
@@ -65,7 +65,7 @@ if (isset($_POST['updatetutioninfo'])) {
 				
 				//success message
 				$success_message = '
-				<div class="signupform_content"><h2><font face="bookman">Post successfull!</font></h2>
+				<div class="signupform_content"><h2><font face="bookman">Successfully Posted!</font></h2>
 				<div class="signupform_text" style="font-size: 18px; text-align: center;"></div></div>';
 
 				header("Location: aboutme.php?uid=".$user."");
@@ -263,7 +263,6 @@ if (isset($_POST['updatetutioninfo'])) {
 			</ul>
 		</div>
 	</div>
-	<!-- footer -->
 	<div>
 	<?php
 		include 'inc/footer.inc.php';
@@ -276,7 +275,6 @@ if (isset($_POST['updatetutioninfo'])) {
 
 
 </div>
-<!-- homemenu tab script -->
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
 </body>
