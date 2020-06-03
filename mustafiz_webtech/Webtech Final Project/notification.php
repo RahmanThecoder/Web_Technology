@@ -146,9 +146,9 @@ $time = new timeago();
 							$ugender_db = $user_fname['gender'];
 
 							if($post_id == ""){
-								$notimsg = "applied on your tution! ";
+								$notimsg = "applied on your Post! ";
 							}else{
-								$notimsg = "Choose you as tutor! ";
+								$notimsg = "wanted to take service from U! ";
 							}
 						
 
@@ -213,9 +213,9 @@ $time = new timeago();
 							$ugender_db = $user_fname['gender'];
 
 							if($post_id == ""){
-								$notimsg = "applied on your tution ";
+								$notimsg = "applied on your teacher post  ";
 							}else{
-								$notimsg = "want to teach you! ";
+								$notimsg = "wants to be your Teacher! ";
 							}
 
 							if($pro_pic_db == ""){
